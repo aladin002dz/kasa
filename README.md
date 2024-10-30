@@ -1,5 +1,6 @@
 # Kasa
 
+![kasa-logo](https://github.com/user-attachments/assets/fb443dee-bd0e-4f85-b531-f872ea90dec9)
 
 
 
