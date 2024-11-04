@@ -10,7 +10,7 @@ const Root = () => {
   return (
   <>
    <Header />
-   <main className="content-first">{<Outlet />}</main>
+   <main className="content-first skeleton">{<Outlet />}</main>
    <Footer />
   </>  )
 }

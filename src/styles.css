@@ -14,7 +14,7 @@
   
 
   --body-font-family:"DM Sans", sans-serif;
-  --body-font-size:1rem;
+  --body-font-size:1.15rem;
   --body-font-weight:400;
 
   /* --title-font-family:"DM Sans", sans-serif;
@@ -36,14 +36,13 @@
 
   body {
     --layout:"Desk";
-    --skeleton:undefined;
+    --skeleton:1240px;
     font-family:var(--body-font-family);
+    font-size:var(--body-font-size);
     font-weight:var(--body-font-weight);
     margin: 0;
-    padding-inline:1rem;
+    padding: 0;
   }
-
-
 
 a {
   color: var(--primary-color);
@@ -53,24 +52,14 @@ a {
 
 a:hover {
   color: var(--third-color);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
 }
 
-
-
-#root {
-  /* max-width: 1280px;
+.skeleton{
+  max-width:var(--skeleton);
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center; */
-}
-
-.core{
-  width:100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  height:100dvh;
+  height:100dvh; */
 }
 
 
@@ -164,10 +153,27 @@ button:focus-visible {
   }
 }
 
-.card {
-  padding: 2em;
+
+
+/* MEDIA QUERIES */
+@media all and (min-width:1300px){
+  body {
+    --layout:"Large-Desk";
+    --skeleton:90%;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media all and (max-width:1000px){
+  body {
+    --layout:"Tab";
+    --skeleton:960px;
+  }
+}
+
+
+@media all and (max-width:600px){
+  body {
+    --layout:"Mobile";
+    --skeleton:100%;
+  }
 }
