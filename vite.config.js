@@ -4,5 +4,13 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"/kasa/",
+  resolve: {
+    alias: {
+      '@root': '/src',
+      '@pages': '/src/pages',
+      '@assets': '/src/assets',
+      '@components': '/src/components',
+    },
+  },
+
 });
