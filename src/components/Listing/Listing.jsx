@@ -1,22 +1,23 @@
+import datas from '@data/logements.json'
+import Card from '../Card/Card';
+
 import './Listing.css'
 
 const Listing = () => {
-
-
+  
+  let logements = [...datas];
 
   return (
   <section className="listing-container">
 
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    <article className="card list-card"><a href="#" className='card-link'><h2 className="card-title">du texte</h2></a></article>
-    
-    
+    { logements.map((logement,index) => {
+
+        return (
+          <Card key={`${logement.id}-${index}`} logement={logement} />)  
+      })
+
+    }
+
   </section>
   )
 }
