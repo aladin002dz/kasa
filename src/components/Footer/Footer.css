@@ -1,0 +1,17 @@
+.banner-footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;;
+  padding:2rem 1rem;
+  background:var(--black-color);
+}
+
+.copyright{
+  font-size:1.35rem;
+  color:var(--white-color);
+}
+
+

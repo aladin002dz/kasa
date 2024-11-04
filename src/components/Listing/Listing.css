@@ -1,0 +1,22 @@
+.listing-container{
+  --gap:2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap:var(--gap);
+  padding-block:2rem;
+}
+
+.list-card{
+--sizes:300px;
+  width:var(--sizes);
+  height: var(--sizes);
+  border-radius: var(--radius);
+  background:var(--primary-color);
+
+}
+
+/* p {
+  color:var(--white-color);
+} */

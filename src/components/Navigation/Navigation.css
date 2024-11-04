@@ -1,0 +1,12 @@
+.main-nav{
+  --gap:1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: var(--gap);
+}
+
+.nav-link{
+  color:var(--black-color);
+  font-size:1.2rem;
+}
