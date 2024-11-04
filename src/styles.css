@@ -62,6 +62,12 @@ a:hover {
   height:100dvh; */
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .debeug {
   outline:4px dotted var(--debeug-color);
