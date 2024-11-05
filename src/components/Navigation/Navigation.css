@@ -9,13 +9,25 @@
 .nav-link{
   color:var(--black-color);
   font-size:1.2rem;
+  position: relative;
 }
 
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
+.nav-link:is(.active):hover::after {
+  opacity: 1;
+}
 
-.nav-link:is(.active) {
-  outline: 4px dotted var(--debeug-color);
+.nav-link:is(.active)::after {
+  content: "fumier";
+  position: absolute;
+  bottom: 150%;
+  left: 0;
+  display: block;
+  opacity: 0;
+  font-size:.8rem;
+  color:var(--debeug-color);
+  /* outline: 4px dotted var(--debeug-color); */
 }
