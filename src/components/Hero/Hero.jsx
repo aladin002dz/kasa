@@ -1,5 +1,6 @@
-import heroBackground from '@assets/hero-background.jpg'
-import heroAnnonceBackground from '@assets/hero-annonce-background.jpg'
+import heroBg from '@assets/hero-background.jpg'
+import heroOtherBg from '@assets/hero-annonce-background.jpg'
+import heroAboutBg from '@assets/hero-about-background.jpg'
 
 import './Hero.css'
 
@@ -7,13 +8,35 @@ const HeroBanner = (props) => {
 
   const {layout,details} = props
 
+  // Display Background Switching Pages Loaded
+  let ArrayAsset = [heroBg,heroOtherBg,heroAboutBg];
+
+  let currentBg;
+
+  switch(layout) {
+    case 'home':
+      currentBg = heroBg
+      break;
+      case 'annonce':
+      currentBg = details.cover
+      break;
+    case 'about': 
+      currentBg = heroAboutBg
+      break;
+      case 'surprise': 
+      currentBg = heroOtherBg
+      break;
+    default:
+      currentBg = heroBg
+  }
+
   return (
 
-    <div className={`hero banner-${layout}`} style={layout === 'annonce' ? {backgroundImage:`url(${details.cover})`} :
-    {backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, var(--op)) 0%, rgba(0, 0, 0, var(--op)) 100%),url(${heroBackground})`}
+    <div className={`hero banner-${layout}`} style={layout === 'annonce' || layout === 'about' ? {backgroundImage:`url(${currentBg})`} :
+    {backgroundImage:`linear-gradient(to right, rgba(0, 0, 0, var(--op)) 0%, rgba(0, 0, 0, var(--op)) 100%),url(${currentBg})`}}>
 
-    }>
-      {layout === 'annonce' ? <h1 className="title" style={{display:'none'}}>{details.title}</h1> : <h2 className="title" data-page={layout}>Chez vous, partout & ailleurs</h2>}
+      {layout === 'home' ? <h1 className="title" data-page={layout}>Chez vous, partout & ailleurs</h1> : null }
+
     </div>
 
   )
