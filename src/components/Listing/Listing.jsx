@@ -7,18 +7,27 @@ const Listing = () => {
   
   let logements = [...datas];
 
+  let freeSpaces = 15;
+
+
   return (
-  <section className="listing-container">
+  <>
+  <section className="listing-section">
+
+  <h3 className="main-title"><span className='free-spaces'>{ `${freeSpaces}`}</span> logements disponibles ({logements.length})</h3>
+
+    <div className="listing-container">
 
     { logements.map((logement,index) => {
-
         return (
           <Card key={`${logement.id}-${index}`} logement={logement} />)  
       })
-
     }
+    </div>
 
   </section>
+  </>
+    
   )
 }
 
