@@ -1,24 +1,21 @@
-
+import PanelTube from '../PanelTube/PanelTube';
 import './Product.css'
 
 
 const Product = (props) => {
 
-
-  const {details} = props
-
+  const {details,fullPanel} = props
 
   function scrollHeight(e) {
 
-  if (e.target.classList.contains('panel-container')) {
+    if (e.target.classList.contains('panel-container')) {
 
-    let dynamicHeight = e.target.scrollHeight;
+      let dynamicHeight = e.target.scrollHeight;
 
-    e.target.closest('.product-panel').style.setProperty('height',`${dynamicHeight}px`);
+      e.target.closest('.product-panel').style.setProperty('height',`${dynamicHeight}px`);
+    }
+
   }
-
-  }
-
 
   return (
 
@@ -42,23 +39,9 @@ const Product = (props) => {
         <p className='product-owner'>{details.host.name}<img src={details.host.picture} alt={details.host.name} className='thumbnail'/></p>
         {details.rating ? (<span className="star">Note : {`${details.rating} / 5`}</span>):'aucunes notes'}
       </div>
-
+      
       <div className='side-bottom'>
-        <div className='product-panel'>
-          <h3 className='title'>Description </h3>
-          <p className='panel-container'>{details.description}</p>
-        </div>
-
-        <div className="product-panel" >
-          <h3 className='title'>Equipements</h3>
-          <ul className='panel-container'>
-          {details.equipments.map((equipement,index)=>{
-
-              return (<li key={`${equipement}-${index}`}>{equipement}</li>)
-              }) 
-            }
-          </ul>
-        </div>
+        <PanelTube details={details} fullPanel={fullPanel}/>
       </div>
     </article>
   

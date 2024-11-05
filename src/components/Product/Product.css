@@ -81,15 +81,18 @@ border-radius:var(--radius) ;
   margin-top: 1.3rem;
 }
 
-.product-panel{
-  /* --height:80px; */
-  width:45%;
-  height:var(--height);
+.tube {
   padding:.75rem;
   color:var(--white-color);
   background:var(--primary-color);
   border-radius:var(--radius);
   overflow: hidden;
+}
+
+.product-panel{
+  /* --height:80px; */
+  width:45%;
+  height:var(--height);
   transition: height .33S ease-in-out;
 }
 
