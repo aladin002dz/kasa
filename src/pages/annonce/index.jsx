@@ -5,11 +5,12 @@ import logement from '@data/logements.json'
 
 const Annonce = () => {
 
-  let details = logement[0]
+  //Testing Injection on ONE logement
+  let details = logement[2]
 
   return (
     <>
-      <HeroBanner layout={'annonce'}/>
+      <HeroBanner layout={'annonce'} details={details} />
       <section className="logement-details">
         <Product details={details} />
       </section>

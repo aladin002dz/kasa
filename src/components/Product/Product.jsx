@@ -8,7 +8,7 @@ const Product = (props) => {
   const {details} = props
 
 
-function scrollHeight(e) {
+  function scrollHeight(e) {
 
   if (e.target.classList.contains('panel-container')) {
 
@@ -17,7 +17,7 @@ function scrollHeight(e) {
     e.target.closest('.product-panel').style.setProperty('height',`${dynamicHeight}px`);
   }
 
-}
+  }
 
 
   return (
