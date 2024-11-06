@@ -9,8 +9,8 @@ import Home from '@pages/home/index.jsx';
 import About from '@pages/about/index.jsx';
 import Surprise from '@pages/surprise/index.jsx';
 import Annonce from '@pages/annonce/index.jsx';
-import PageNotFound from '@pages/404/pageNotFound';
-
+import PageNotFound from '@pages/404/pageNotFound.jsx';
+  
 
 const router = createBrowserRouter([
   {
