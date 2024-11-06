@@ -4,12 +4,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from '@pages//root.jsx';
+import Root from '@pages/root.jsx';
 import Home from '@pages/home/index.jsx';
 import About from '@pages/about/index.jsx';
 import Surprise from '@pages/surprise/index.jsx';
 import Annonce from '@pages/annonce/index.jsx';
-import PageNotFound from '@pages/404/PageNotFound';
+import PageNotFound from '@pages/404/pageNotFound';
 
 
 const router = createBrowserRouter([
