@@ -6,7 +6,7 @@ import './Hero.css'
 
 const HeroBanner = (props) => {
 
-  const {layout,details} = props
+  const {layout, details = null} = props
 
   // Display Background Switching Pages Loaded
   let ArrayAsset = [heroBg,heroOtherBg,heroAboutBg];
@@ -18,7 +18,7 @@ const HeroBanner = (props) => {
       currentBg = heroBg
       break;
       case 'annonce':
-      currentBg = details.cover
+      currentBg = details ? details.cover : heroBg
       break;
     case 'about': 
       currentBg = heroAboutBg

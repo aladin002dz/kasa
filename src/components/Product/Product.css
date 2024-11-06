@@ -107,3 +107,27 @@ border-radius:var(--radius) ;
 .panel-container{
   margin-block:1rem;
 }
+
+.logement-not-found {
+  margin-block:3rem;
+}
+
+.logement-not-found .title {
+  margin-block:1rem;
+  font-size:3rem;
+  color:var(--black-color);
+}
+
+.logement-not-found .description {
+  font-size:1.25rem;
+  color:var(--black-color)
+}
+
+.logement-not-found .description> a {
+
+  color:var(--black-color)
+}
+
+.special{
+  color:var(--third-color);
+}

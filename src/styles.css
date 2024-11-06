@@ -55,7 +55,6 @@
   }
 
 a {
-  color: var(--primary-color);
   text-decoration: unset;
   transition: var(--regTransi);
 }

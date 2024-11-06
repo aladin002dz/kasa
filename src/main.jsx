@@ -10,7 +10,7 @@ import About from '@pages/about/index.jsx';
 import Surprise from '@pages/surprise/index.jsx';
 import Annonce from '@pages/annonce/index.jsx';
 import PageNotFound from '@pages/404/pageNotFound.jsx';
-  
+
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />},
         {
-          path: "/annonce",
+          path: "/annonce/:id",
           element: <Annonce />},
         {
         path: "/benji",

@@ -1,27 +1,48 @@
 
+import {useParams,Link} from 'react-router-dom'
 import HeroBanner from "@components/Hero/Hero"
 import Product from "@components/Product/Product"
 
-import logement from '@data/logements.json'
+import logements from '@data/logements.json'
 
 import '@pages/annonce/annonce.css'
 
 const Annonce = () => {
 
+  let getParams = useParams();
+
+
   //Testing Injection on ONE logement
-  let details = logement[2]
+  // let details = logements[2];
+
+  //Get ALl datas and dispatch good url Product
+  let details = logements.find((logement)=> {
+
+    return logement.id === getParams.id
+
+  })
   
   let fullPanel = true ;
 
-  // console.log('composant Annonce : ', details);
-
   return (
-    <>
+
+    details ? 
+    (<>
       <HeroBanner layout={'annonce'} details={details} />
       <section className="logement-details">
         <Product details={details} fullPanel={fullPanel} />
       </section>
     </>
+  ) : (
+  <> 
+    <HeroBanner layout={'annonce'}/>
+    <div className="logement-not-found">
+      <h1 className="title">Ce logement n'existe <span className="special">pas encore !</span></h1>
+      <p className="description"><Link to="/about">Contactes-nous </Link>pour ajouter ton logement dans notre liste 💥</p>
+    </div>
+    </>
+    )
+
   )
 }
 

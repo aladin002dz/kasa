@@ -1,4 +1,5 @@
-import PanelTube from "@components/PanelTube/PanelTube";
+import PanelTube from "@components/PanelTube/PanelTube"
+import Form from '@components/Form/Form'
 import './Us.css'
 
 const Us = () =>{
@@ -15,7 +16,7 @@ const Us = () =>{
         )
 
       })}
-
+   
     </section>
   )
 }
