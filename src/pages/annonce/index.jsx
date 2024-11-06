@@ -4,6 +4,8 @@ import Product from "@components/Product/Product"
 
 import logement from '@data/logements.json'
 
+import './annonce.css'
+
 const Annonce = () => {
 
   //Testing Injection on ONE logement
