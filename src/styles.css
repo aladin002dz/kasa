@@ -13,17 +13,21 @@
   --debeug-color-alt:tomato;
   
 
-  --body-font-family:"DM Sans", sans-serif;
+  --body-font-family:"Montserrat", sans-serif;
   --body-font-size:1.15rem;
   --body-font-weight:400;
 
-  /* --title-font-family:"DM Sans", sans-serif;
-  --title-font-size:1rem; */
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-bold:700;
+
+  --title-font-family:var(--body-font-family);
+  --title-font-size:2rem;
   
-  /* --cta-button-font-size:1.2rem;
+  --cta-button-font-size:1.2rem;
   --cta-button-color:var(--white-color);
   --cta-button-weight:600;
-  --cta-button-background:var(--main-color); */
+  --cta-button-background:var(--main-color);
   
   --radius:5px;
   --regTransi:all .26s ease-in-out;
@@ -44,6 +48,12 @@
     padding: 0;
   }
 
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
 a {
   color: var(--primary-color);
   text-decoration: unset;
@@ -55,11 +65,15 @@ a:hover {
 }
 
 .skeleton{
-  max-width:var(--skeleton);
+  width:var(--skeleton);
   margin: 0 auto;
   /* display: flex;
   flex-direction: column;
   height:100dvh; */
+}
+
+.content-first {
+  margin-block:auto
 }
 
 ul {
