@@ -4,6 +4,8 @@ const PanelTube = (props) => {
 
 const {details,softkill,fullPanel} = props
 
+// console.log(fullPanel);
+
   return (
     fullPanel ? (
     <>
@@ -25,7 +27,7 @@ const {details,softkill,fullPanel} = props
           </ul>
       </div>
     </>) : (<div className='soft-skill tube'>
-          <h3 className='title'>{softkill}</h3>
+          <h3 className='title' data-ui="no description">{softkill}</h3>
         </div>)
   )
 }

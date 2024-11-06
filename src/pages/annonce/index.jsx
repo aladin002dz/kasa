@@ -11,7 +11,7 @@ const Annonce = () => {
   
   let fullPanel = true ;
 
-  console.log('composant Annonce : ', details);
+  // console.log('composant Annonce : ', details);
 
   return (
     <>

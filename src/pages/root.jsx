@@ -10,8 +10,10 @@ const Root = () => {
   return (
   <>
    <Header />
-   <main className="content-first skeleton">{<Outlet />}</main>
-   <Footer />
+    <main className="content-first skeleton">
+    <Outlet />
+    </main>
+    <Footer />
   </>  )
 }
 
