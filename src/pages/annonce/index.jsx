@@ -4,7 +4,7 @@ import Product from "@components/Product/Product"
 
 import logement from '@data/logements.json'
 
-import '../annonce.css'
+import '@pages/annonce/annonce.css'
 
 const Annonce = () => {
 
