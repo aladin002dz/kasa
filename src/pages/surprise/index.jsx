@@ -1,6 +1,6 @@
 import HeroBanner from '@components/Hero/Hero'
 
-import '@pages/surprise/Surprise.css'
+import '@pages/surprise/Surprise2.css'
 
 
 const Surprise = () => {
