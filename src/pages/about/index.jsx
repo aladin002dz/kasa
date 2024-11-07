@@ -1,7 +1,7 @@
 import HeroBanner from "@components/Hero/Hero"
 import Us from "@components/Us/Us"
 
-import "@pages/about/About.css"
+import "./About.css"
 
 const About = () => {
 

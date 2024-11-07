@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 
 import logements from '@data/logements.json'
 
-import '@pages/annonce/Annonce.css'
+import './Annonce.css'
 
 const Annonce = () => {
 

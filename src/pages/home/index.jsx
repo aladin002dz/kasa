@@ -3,7 +3,7 @@ import HeroBanner from '@components/Hero/Hero.jsx'
 import Listing from '@components/Listing/Listing.jsx'
 
 
-import '@pages/home/Home.css'
+import './Home.css'
 
 
 function Home() {
