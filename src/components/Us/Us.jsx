@@ -1,6 +1,6 @@
 import PanelTube from "@components/PanelTube/PanelTube";
 
-import './Us.css';
+import './Us2.css';
 
 const Us = () => {
 
