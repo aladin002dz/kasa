@@ -1,22 +1,22 @@
-import PanelTube from "@components/PanelTube/PanelTube"
-import Form from '@components/Form/Form'
-import './Us.css'
+import PanelTube from "@components/PanelTube/PanelTube";
 
-const Us = () =>{
+import './Us.css';
 
-  let softkills = ['Fiabilité','Responsabilite','Respect','Service','Sécurité'];
+const Us = () => {
+
+  let softkills = ['Fiabilité', 'Responsabilite', 'Respect', 'Service', 'Sécurité'];
 
   return (
     <section className="us">
-      
-      {softkills.map((softkill,index) => {
-      
-        return(
+
+      {softkills.map((softkill, index) => {
+
+        return (
           <PanelTube key={`tube-${index}`} softkill={softkill} fullPanel={false} />
         )
 
       })}
-   
+
     </section>
   )
 }
